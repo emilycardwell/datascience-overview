@@ -72,7 +72,7 @@ Track & Save
 ```python
 import mlflow
 
-mlflow.set_tracking_uri("https://mlflow.lewagon.ai")
+mlflow.set_tracking_uri("https://mlflow..ai")
 mlflow.set_experiment(experiment_name="wagoncab taxifare")
 ```
 
@@ -96,7 +96,7 @@ Load model
 ```python
 import mlflow
 
-mlflow.set_tracking_uri("https://mlflow.lewagon.ai")
+mlflow.set_tracking_uri("https://mlflow.organization.ai")
 
 model_uri = "models:/taxifare_model/Production"
 

@@ -61,13 +61,13 @@
         ```
 
         ```python
-        from lewagon import Ticket
+        from mills import Ticket
         ```
 
         ```python
         class Student:
             # **class attribute**
-            school = 'lewagon'
+            school = 'mills'
 
             # initializer of **instance attributes** (constructor)
             def __init__(self, name, age): # Note the `self` parameter
@@ -80,7 +80,7 @@
         ```
 
         ```python
-        from lewagon.student import Student
+        from mills.student import Student
         ```
 
         ```python
@@ -130,7 +130,7 @@
         ```python
         class *Student*:
             # **class attribute**
-            school = 'lewagon'
+            school = 'mills'
 
             # initializer of **instance attributes** (constructor)
             def **__init__**(self, name, age): # Note the `self` parameter
@@ -139,7 +139,7 @@
         ```
 
         ```python
-        from lewagon.student import Student
+        from mills.student import Student
 
         class DataStudent(*Student*):
             cursus = 'datascience'

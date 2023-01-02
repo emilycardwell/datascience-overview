@@ -73,7 +73,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 def get_mock_up_data():
     sentence_1 = 'Deep learning is super easy'
     sentence_2 = 'Deep learning was super bad and too long'
-    sentence_3 = 'This is the best lecture of the camp!'
+    sentence_3 = 'This is the best lecture of them all!'
 
     X = [sentence_1, sentence_2, sentence_3]
     y = np.array([1., 0., 0.])

@@ -97,7 +97,7 @@
     ```python
     # Student class with allowed optional attributes
     class Student:
-        school = 'lewagon'
+        school = 'mills'
 
     		def __init__(self, name, age, **kwargs):
             self.name = name

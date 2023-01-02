@@ -82,7 +82,7 @@ cleaned_sentences = [basic_cleaning(sentence) for sentence in sentences]
     ```python
     import re
 
-    text = """<head><body>Hello Le Wagon!</body></head>"""
+    text = """<head><body>Hello World!</body></head>"""
     cleaned_text = re.sub('<[^<]+?>','', text)
     ```
 

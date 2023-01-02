@@ -21,29 +21,29 @@ with open('directory/filename.csv') as csvfile:
 ```
 
 - **Headings**: with dataset that has first column as a header column:
-    
+
     ```python
     with open('directory/filename.csv') as csvfile:
     		reader = csv.DictReader(csvfile, skipinitialspace=True)
-    
-    		for row in reader: 
+
+    		for row in reader:
     				print(row)
     ## prints dictionary using first column as first dict key
     ```
-    
+
 - Writing a CSV:
-    
+
     ```python
     lofd = [{...}, {...}...]
-    
+
     with open('directory/filename.csv', 'w') as csvfile:
     		writer = csv.DictWriter(csvfile, fieldnames=lofd[0].keys())
     		writer.writeheader()
-    
+
     		for x in lofd:
     				writer.writerow(x)
     ```
-    
+
 
 ### **API**
 
@@ -63,43 +63,43 @@ with open('directory/filename.csv') as csvfile:
     - online: base url > endpoint > parameters
     - RESTful: GET, POST
         - requests: HTTP for humans
-        
+
         ```python
         import requests
-        
+
         url = 'https:...'
-        
+
         response = requests.get(url)
         print(response)
-        ##Response [200] 
+        ##Response [200]
         # perfect! other number? sucks
         ```
-        
+
         ```python
         import requests
-        
+
         url = "https://..."
         response = requests.get(url)
-        print(response.status_code) 
+        print(response.status_code)
         data = response.json()
-        
-        # OR 
-        
+
+        # OR
+
         response = requests.get(url).json()
         print(type(response)
         ## dict
         ```
-        
+
         ```python
         import requests
-        
+
         isbn = '0-7475...'
         url = f'https://...?bibkeys=ISBN:{isbn}&format=json&jscmd=data'
         									# parameters: start with ? if single, & if mult.
         									# key                 format      filter
         response = requests.get(url).json()
         ```
-        
+
         ```python
         response = requests.get(
         		'base url',
@@ -107,24 +107,24 @@ with open('directory/filename.csv') as csvfile:
         		).json()
         print(response[key]['title']
         ```
-        
+
     - Returns: **JSON** (dictionary)
-        
+
         ```python
         import json
-        
+
         json.load(file_name)
         # returns dictionary
-        
+
         # or
-        
+
         data = requests.get(url).json()
         jDict = {}
         for myDict in data:
         		for key, value in song.items():
         				jDict[key] = value
         ```
-        
+
 
 ### **Scraping**: online repositories
 
@@ -211,7 +211,7 @@ import requests
 ```
 
 ```python
-url = 'http://lyrics.lewagon.ai/...'
+url = 'http://lyrics.organization.ai/...'
 response = requests.get(url)
 data = response.json()['lyrics'] # key of the dictionary data returns
 ```
@@ -222,7 +222,7 @@ new_df = pd.DataFrame(data)
 
 ```python
 def fetch_lyrics(artist, title):
-		url = f'http://lyrics.lewagon.ai/search?artists={artist}&title={title}'
+		url = f'http://lyrics.organization.ai/search?artists={artist}&title={title}'
 		response = requests.get(url)
 		if response.status_code == 200:
 				data = response.json()
@@ -290,7 +290,7 @@ import pandas_gbq
 ```
 
 ```python
-project_id = 'my-project-name' 
+project_id = 'my-project-name'
 sql = """
 		SELECT faa_identifier, name, longitude, latitude, airport_type, service_city, country
 		FROM `bigquery-public-data.faa.us_airports`
