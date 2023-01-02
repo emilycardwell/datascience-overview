@@ -1,6 +1,6 @@
 # Data Science Overview
 
-[Python Basics](data-science-overview/python-basics.md)
+:panda_face: [Python Basics](data-science-overview/python-basics.md)
 
 [Pandas](data-science-overview/pandas.md)
 
