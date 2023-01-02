@@ -4,7 +4,7 @@
 
 ### Packages/Modules
 
-- pandas, lewagon
+- pandas, numpy
 
 ### Classes
 
