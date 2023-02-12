@@ -142,7 +142,7 @@ print(my_name.lower())
 print(my_name.capitalize())
 ## Emily
 
-print(my_name.**is**lower())
+print(my_name.islower())
 #prints bool of if the string is all lowercase
 
 print(len(my_name))
