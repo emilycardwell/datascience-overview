@@ -198,7 +198,12 @@ Slice notation takes the form `[start:stop:step]`
 ## 'dlrow olleh'
 ```
 
-### Split
+```python
+z = 'z'
+hello = 'hello'
+new_string = hello[:3] + z + hello[3:]
+## 'helzlo'
+```
 
 ## Numbers - integers and floating points (decimals)
 
